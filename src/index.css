@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.theme-transition {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Optional: Add custom scrollbar styles */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  
+  .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+  }
+}
+
