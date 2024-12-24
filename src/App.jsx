@@ -1,11 +1,14 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
 import Calculator from './Calculator';
 
 function App() {
   return (
-    <div className="App">
-      <Calculator />
-    </div>
+    <Router> 
+      <div className="App">
+        <Calculator />
+      </div>
+    </Router>
   );
 }
 

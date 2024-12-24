@@ -270,17 +270,7 @@ const Calculator = () => {
     </button>
   );
 
-  if (showHistory) {
-    return (
-      <History 
-        history={history}
-        clearHistory={clearHistory}
-        deleteHistoryItem={deleteHistoryItem}
-        useCalculation={useCalculation}
-        onBack={() => setShowHistory(false)}
-      />
-    );
-  }
+
 
 
   useEffect(() => {
@@ -340,6 +330,17 @@ const Calculator = () => {
     };
   }, [handleNumber, handleOperator, handleEqual, handleBackspace, handleClear, handleScientificOperation, isScientific]);
   
+  if (showHistory) {
+    return (
+      <History 
+        history={history}
+        clearHistory={clearHistory}
+        deleteHistoryItem={deleteHistoryItem}
+        useCalculation={useCalculation}
+        onBack={() => setShowHistory(false)}
+      />
+    );
+  }
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${
